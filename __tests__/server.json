@@ -1,0 +1,53 @@
+{
+  "imposters": [
+    {
+      "name": "api-impostor",
+      "port": 3000,
+      "protocol": "http",
+      "stubs": [
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "POST",
+                "path": "/create"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 201,
+                "headers": {
+                  "Content-Type": "application/json"
+                },
+                "body": "{\"message\": \"Simulación de creación exitosa\"}"
+              }
+            }
+          ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "GET",
+                "path": "/get"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": {
+                  "Content-Type": "application/json"
+                },
+                "body": "{\"message\": \"Simulación de obtención exitosa\"}"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

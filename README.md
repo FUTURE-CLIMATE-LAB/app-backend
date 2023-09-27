@@ -1,8 +1,38 @@
-# Web-app
-Development of different components of FCL's Web Application
+# App Backend
 
-El primer release de la aplicación incluirá solamente las siguientes funcionalidades:
+## Descripción
 
-- Construcción de la base de datos a partir de los siguientes parámetros modelo global GFS: Temperatura, precipitación, vientos y humedad en superficie
-- Construcción de la aplicación que reciba la información de la base de datos y prepare la distribución de la informacón en formato raster (mapas) y series temporales en lugares elegidos.
-- Diseño y construcción del canal de distribución: Página web.
+Pruebas de los 2 endpoints
+
+## Estructura del Proyecto
+
+- **__test__:** Directorio donde estaran todos los tests, como archivo.test.ts
+
+## Scripts en package.json
+- **pnpm test:** Muestra los test que se crearon en el directorio __tests__
+
+## Dependencies
+- Nodejs v18.18.0
+- pnpm v8.9.0
+
+### Development
+
+- **@types/jest:** ^29.5.5 - Tipos TypeScript para Jest.
+- **@types/supertest:** ^2.0.14 - Tipos TypeScript para Supertest.
+- **jest:** ^29.7.0 - Marco de pruebas para JavaScript y TypeScript.
+- **supertest:** ^6.3.3 - Biblioteca para realizar pruebas de HTTP en Node.js.
+- **ts-jest:** ^29.1.1 - Adaptador de TypeScript para Jest.
+
+
+## Pasos Siguientes
+
+1. **Instalación de Dependencias:**
+   Ejecuta `pnpm install` para instalar todas las dependencias necesarias.
+
+2. **Ejecutar test:**
+   Utiliza `pnpm test` para ejecutar las pruebas.
+
+
+## Notas Adicionales
+
+- El mi caso, estoy utilizando el gestor de paquetes `pnpm`, pero como este ultimo esta basado netamente en `npm`, no deberia existir problemas al momento de la intalacion.

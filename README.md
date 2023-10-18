@@ -34,7 +34,7 @@ Se ha incluido un archivo `.env.example` para facilitar la configuración del en
 
 - Nodejs v18.18.0
 - pnpm v8.9.0
-
+- 
 ### Production
 
 - **cors:** ^2.8.5 - Middleware para habilitar CORS en Express.

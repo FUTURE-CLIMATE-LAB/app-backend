@@ -9,14 +9,14 @@ const indiceAleatorio = (arr) => {
 }
 
 mockServer.addMock({
-	port,
-	method: 'GET',
-	uri,
-	handler: function (_req, res) {
+  port,
+  method: 'GET',
+  uri,
+  handler: function (_req, res) {
     const response = messages[indiceAleatorio(messages)]
-		res.status(response.code).json({
+    res.status(response.code).json({
       code: response.code,
       ...response.content
     })
-	}
-});
+  }
+})

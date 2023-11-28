@@ -46,6 +46,27 @@
               }
             }
           ]
+        },
+        {
+          "predicates": [
+            {
+              "equals": {
+                "method": "GET",
+                "path": "/resource-not-found"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 404,
+                "headers": {
+                  "Content-Type": "application/json"
+                },
+                "body": "{\"error\": \"Recurso no encontrado\"}"
+              }
+            }
+          ]
         }
       ]
     }

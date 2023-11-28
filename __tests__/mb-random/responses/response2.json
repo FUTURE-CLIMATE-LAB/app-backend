@@ -1,0 +1,7 @@
+{
+  "statusCode": 404,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": "{\"message\": \"Recurso no encontrado\"}"
+}

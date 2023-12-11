@@ -1,0 +1,82 @@
+openapi: 3.0.0
+info:
+  title: Documentación de MockServer
+  version: 1.0.0
+paths:
+  /api/random:
+    get:
+      summary: Obtener la lista de usuarios
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+            application/json:
+              example:
+                users:
+                  - id: 1
+                    name: "Leanne Graham"
+                    email: "Sincere@april.biz"
+                    phone: "1-770-736-8031 x56442"
+                    website: "hildegard.org"
+                  - id: 2
+                    name: "Ervin Howell"
+                    email: "Shanna@melissa.tv"
+                    phone: "90566-7771"
+                    website: "anastasia.net"
+                  - id: 3
+                    name: "Clementine Bauch"
+                    email: "Nathan@yesenia.net"
+                    phone: "1-463-123-4447"
+                    website: "ramiro.info"
+        '404':
+          description: Usuario no encontrado
+          content:
+            application/json:
+              example:
+                errors:
+                  users: ["Usuario no encontrado"]
+
+        '401':
+          description: Usuario no encontrado
+          content:
+            application/json:
+              example:
+                errors:
+                  users: ["Error de registro"]
+  /api/photos:
+    get:
+      summary: Obtener la lista de fotos
+      responses:
+        '400':
+          description: Respuesta exitosa (aunque sea un error simulado)
+          content:
+            application/json:
+              example:
+                photos:
+                  - albumId: 1
+                    id: 1
+                    title: "accusamus beatae ad facilis cum similique qui sunt"
+                    url: "https://via.placeholder.com/600/92c952"
+                    thumbnailUrl: "https://via.placeholder.com/150/92c952"
+                  - albumId: 1
+                    id: 2
+                    title: "reprehenderit est deserunt velit ipsam"
+                    url: "https://via.placeholder.com/600/771796"
+                    thumbnailUrl: "https://via.placeholder.com/150/771796"
+                  - albumId: 1
+                    id: 3
+                    title: "officia porro iure quia iusto qui ipsa ut modi"
+                    url: "https://via.placeholder.com/600/24f355"
+                    thumbnailUrl: "https://via.placeholder.com/150/24f355"
+                  - albumId: 1
+                    id: 4
+                    title: "culpa odio esse rerum omnis laboriosam voluptate repudiandae"
+                    url: "https://via.placeholder.com/600/d32776"
+                    thumbnailUrl: "https://via.placeholder.com/150/d32776"
+        '500':
+          description: Fallas en el servidor
+          content:
+            application/json:
+              example:
+                errors:
+                  http: ["Fallas en el servidor"]

@@ -1,7 +1,7 @@
 const { mockServer } = require('http-mockserver')
 const messages = require('./res.json')
 
-const port = 7600
+const port = 5500
 const uri = '/api/random'
 
 const indiceAleatorio = (arr) => {
